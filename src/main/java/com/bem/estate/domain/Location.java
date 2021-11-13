@@ -24,7 +24,10 @@ public class Location {
     String province;
     String village;
 
-    String lat_d;
-    String long_t;
+    Double lat_d;
+    Double long_t;
 
 }
+//todo 75
+//
+//MySQL's Spatial Extensions for long and lat

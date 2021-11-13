@@ -7,9 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,13 +34,15 @@ public class Elan {
     @Enumerated(EnumType.STRING)
     ElanType elanTypeId;
 
-    @OneToMany
-    Set<BuildingDetails> buildingDetailsId;
+    Double sellPrice;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    Set<BuildingDetails> buildingDetails;
 
     @ManyToOne
     AppUser appUserId;
 
-    Double sellPrice;
+
     @Enumerated(EnumType.STRING)
     PropertyCategory propertyCategoryId;
 

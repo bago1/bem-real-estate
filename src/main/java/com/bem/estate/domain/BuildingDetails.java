@@ -6,7 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -27,17 +29,18 @@ public class BuildingDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @OneToOne
-    Location locationId;
-
+    String deliveryYear;
+    Boolean centralHeat;
     Integer floor_number;
-    Boolean building_document;
 
-    @OneToOne
-    MTKDetails mtkDetailsId;
+    @Enumerated(EnumType.STRING)
+    BuildingType buildingType;
 
-    String delivery_year;
-    Boolean central_heat;
+    @OneToOne(cascade = CascadeType.ALL)
+    Location location;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    MTKDetails mtkDetails;
 
     @ManyToMany
     Set<Destinations> destinations;
@@ -45,8 +48,7 @@ public class BuildingDetails {
     @ManyToMany
     Set<Facility> facilities;
 
-    @Enumerated(EnumType.STRING)
-    BuildingType buildingType;
+
 
 
 }

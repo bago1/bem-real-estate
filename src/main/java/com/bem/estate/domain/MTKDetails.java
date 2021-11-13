@@ -24,4 +24,6 @@ public class MTKDetails {
     Long id;
 
     String name;
+    Boolean building_document;
+
 }
