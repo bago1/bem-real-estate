@@ -1,7 +1,8 @@
 package com.bem.estate.domain;
 
-
-import com.bem.estate.enums.BuildingType;
+import com.bem.estate.enums.AppUserType;
+import com.bem.estate.enums.ElanType;
+import com.bem.estate.enums.PropertyCategory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -14,39 +15,42 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
 import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-public class BuildingDetails {
-
+public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @OneToOne
-    Location locationId;
-
-    Integer floor_number;
-    Boolean building_document;
-
-    @OneToOne
-    MTKDetails mtkDetailsId;
-
-    String delivery_year;
-    Boolean central_heat;
+    String name;
+    String surname;
+    String sex;
+    String email;
+    String password;
+    String fbLink;
+    String instagramLink;
+    String mobileNumber;
 
     @ManyToMany
-    Set<Destinations> destinations;
-
-    @ManyToMany
-    Set<Facility> facilities;
-
+    Set<Elan> favourities;
     @Enumerated(EnumType.STRING)
-    BuildingType buildingType;
-
-
+    AppUserType appUserType;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

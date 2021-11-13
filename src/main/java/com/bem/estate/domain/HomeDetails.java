@@ -13,7 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@RequiredArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter

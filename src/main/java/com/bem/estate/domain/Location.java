@@ -11,11 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@RequiredArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
-public class Locations {
+public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;

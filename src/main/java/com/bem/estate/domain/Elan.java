@@ -1,7 +1,7 @@
 package com.bem.estate.domain;
 
-
-import com.bem.estate.enums.BuildingType;
+import com.bem.estate.enums.ElanType;
+import com.bem.estate.enums.PropertyCategory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import java.util.Set;
 
@@ -21,32 +23,24 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-public class BuildingDetails {
-
+public class Elan {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @OneToOne
-    Location locationId;
-
-    Integer floor_number;
-    Boolean building_document;
-
-    @OneToOne
-    MTKDetails mtkDetailsId;
-
-    String delivery_year;
-    Boolean central_heat;
-
-    @ManyToMany
-    Set<Destinations> destinations;
-
-    @ManyToMany
-    Set<Facility> facilities;
-
     @Enumerated(EnumType.STRING)
-    BuildingType buildingType;
+    ElanType elanTypeId;
 
+    @OneToMany
+    Set<BuildingDetails> buildingDetailsId;
 
+    @ManyToOne
+    AppUser appUserId;
+
+    Double sellPrice;
+    @Enumerated(EnumType.STRING)
+    PropertyCategory propertyCategoryId;
+
+    @OneToOne
+    HomeDetails homeDetailsId;
 }
