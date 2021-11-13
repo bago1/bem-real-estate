@@ -15,9 +15,12 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Setter
 @Getter
-public class BuildingType {
-
+public class Destinations {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+
+    String name;
+
+    Locations id;
 }
