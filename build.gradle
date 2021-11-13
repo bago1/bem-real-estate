@@ -28,6 +28,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 //    implementation group: 'org.liquibase', name: 'liquibase-core', version: '4.5.0'
 
+    implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+
+
 }
 
 test {
