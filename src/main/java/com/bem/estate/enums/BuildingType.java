@@ -1,4 +1,4 @@
-package com.bem.estate.domain;
+package com.bem.estate.enums;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,14 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
-@RequiredArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-public class BuildingType {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+@Getter
+public enum BuildingType {
+
+    NEW_B, OLD_B, HOUSE;
 }

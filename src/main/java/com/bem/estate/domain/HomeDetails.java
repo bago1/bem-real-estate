@@ -1,6 +1,7 @@
 package com.bem.estate.domain;
 
 
+import com.bem.estate.enums.BuildingType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
