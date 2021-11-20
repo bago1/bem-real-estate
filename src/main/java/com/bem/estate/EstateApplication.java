@@ -10,16 +10,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @RequiredArgsConstructor
 public class EstateApplication implements CommandLineRunner {
-private final TestRepo repo;
-	public static void main(String[] args) {
-		SpringApplication.run(EstateApplication.class, args);
-	}
+    private final TestRepo repo;
 
-	@Override
-	public void run(String... args) throws Exception {
-		eco t =  new eco(10l,"amin");
+    public static void main(String[] args) {
+        SpringApplication.run(EstateApplication.class, args);
+    }
 
-		System.out.println("golze"+repo.findAll());
-//		repo.save(t);
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        eco t = new eco(null,"yanni");
+
+        repo.save(t);
+    }
 }
