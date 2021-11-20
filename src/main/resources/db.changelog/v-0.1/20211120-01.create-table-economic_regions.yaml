@@ -1,0 +1,21 @@
+#databaseChangeLog:
+#  - preConditions:
+#      onFail: HALT
+#      onError: HALT
+#
+#  - changeSet:
+#      id: create-singers-table2
+#      labels: example
+#      author: spanner-examples
+#      changes:
+#        - createTable:
+#            tableName: ECONOMIC_REGION
+#            columns:
+#              -  column:
+#                   name:    id
+#                   type:    BIGINT
+#                   constraints:
+#                     primaryKey: true
+#              -  column:
+#                   name:    name
+#                   type:    VARCHAR(255)
