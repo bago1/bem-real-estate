@@ -1,28 +1,26 @@
-package com.bem.estate.domain;
+package com.bem.estate.domain.address;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.Set;
+import javax.persistence.ManyToOne;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-public class Destinations {
+public class Province {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
     String name;
 
-    @ManyToMany
-    Set<Location> locations;
+    @ManyToOne
+    District district;
 }

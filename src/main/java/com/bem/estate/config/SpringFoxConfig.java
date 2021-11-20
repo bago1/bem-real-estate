@@ -30,10 +30,10 @@ public class SpringFoxConfig {
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Real Estate",
-                "Doc and Testing",
+                "Created by Bago",
                 "V1",
                 "Empty link",
-                new Contact("Bago", " ", "ahmadovba@gmail.com"),
+                new Contact(  "","","ahmadovba@gmail.com"),
                 " ", " ", Collections.emptyList());
     }
 }

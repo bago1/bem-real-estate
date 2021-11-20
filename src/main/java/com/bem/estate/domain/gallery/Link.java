@@ -1,5 +1,7 @@
-package com.bem.estate.domain;
+package com.bem.estate.domain.gallery;
 
+
+import com.bem.estate.domain.Home;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,15 +16,18 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Setter
 @Getter
-public class OldLayoutType {
+public class Link {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    String name;
-
     @ManyToOne
-    Building buildingId;
+    Home home;
+
+    String youtubeLink;
 
 
+    // String fbLink; not defined strategy
+    //String instagramLink;  not defined strategy
 }

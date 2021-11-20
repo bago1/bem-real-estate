@@ -8,21 +8,30 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-public class OldLayoutType {
+public class HomeFeature {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    Boolean kombi;
+    Boolean internet;
+    Boolean kabelTv;
+    Boolean telefon;
+    Boolean storage;
+    Boolean showerCabin;
+    Boolean jakuzi;
+    Integer airConditioner;
+    Boolean hot_floor;
+    String floor_type;
+    Boolean furnitured;
+    String remained_furnitures;
+    Boolean gas;
+    Boolean central_heat;
 
-    String name;
 
-    @ManyToOne
-    Building buildingId;
 
 
 }

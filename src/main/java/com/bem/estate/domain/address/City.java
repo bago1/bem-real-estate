@@ -1,33 +1,25 @@
-package com.bem.estate.domain;
+package com.bem.estate.domain.address;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-public class Location {
+public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+    String name;
 
-    String city;
-    String region;
-    String province;
-    String village;
-
-    Double lat_d;
-    Double long_t;
-
+    @ManyToOne
+    EconomicRegion economicRegion;
 }
-//todo 75
-//
-//MySQL's Spatial Extensions for long and lat

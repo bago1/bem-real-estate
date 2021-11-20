@@ -1,17 +1,13 @@
 package com.bem.estate.domain;
 
 
-import com.bem.estate.enums.BuildingType;
+import com.bem.estate.domain.address.Location;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,32 +19,31 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-public class BuildingDetails {
+public class Home {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+    Double square;
+    Double price;
+    Integer roomNumber;
+    String description;
 
-    String deliveryYear;
-    Boolean centralHeat;
-    Integer floor_number;
-
-    @Enumerated(EnumType.STRING)
-    BuildingType buildingType;
+    //User user
 
     @OneToOne(cascade = CascadeType.ALL)
+    Location homeLocation;
+
+    @OneToOne
+    HomeDetail homeDetail;
+
+    @OneToOne
+    HomeFeature homeFeature;
+
+    @ManyToMany
+    Set<Destination> destinations;
+
+    @OneToOne
     Location location;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    MTKDetails mtkDetails;
-
-    @ManyToMany
-    Set<Destinations> destinations;
-
-    @ManyToMany
-    Set<Facility> facilities;
-
-
-
 
 }

@@ -1,11 +1,8 @@
 package com.bem.estate.domain;
 
 import com.bem.estate.enums.AppUserType;
-import com.bem.estate.enums.ElanType;
-import com.bem.estate.enums.PropertyCategory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -37,20 +34,7 @@ public class AppUser {
 
     @ManyToMany
     Set<Elan> favourities;
+
     @Enumerated(EnumType.STRING)
-    AppUserType appUserType;
+    AppUserType userType;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

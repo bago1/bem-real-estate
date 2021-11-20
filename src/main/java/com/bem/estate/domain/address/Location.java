@@ -1,11 +1,7 @@
-package com.bem.estate.domain;
+package com.bem.estate.domain.address;
 
-import com.bem.estate.enums.ElanType;
-import com.bem.estate.enums.ImgVideo;
-import com.bem.estate.enums.PropertyCategory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -18,14 +14,31 @@ import javax.persistence.OneToOne;
 @NoArgsConstructor
 @Setter
 @Getter
-public class ElanDetail {
+public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+
+    String addressInfo;  // M.Hadi kucesi 24b
+
     @OneToOne
-    Elan elanId;
-    String url;
-    String description;
-    ImgVideo imgVideo;
+    City city;
+
+    @OneToOne
+    District district;
+
+    @OneToOne
+    Province province;
+
+    @OneToOne
+    Village village;
+
+    @OneToOne
+    EconomicRegion economicRegion;
+
+    Double lat_d;
+    Double long_t;
 
 }
+
+//MySQL's Spatial Extensions for long and lat

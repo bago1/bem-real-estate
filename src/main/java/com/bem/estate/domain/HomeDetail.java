@@ -1,13 +1,15 @@
 package com.bem.estate.domain;
 
 
-import com.bem.estate.enums.BuildingType;
+import com.bem.estate.enums.HomeRepairSituation;
+import com.bem.estate.enums.HomeView;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,39 +18,28 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Setter
 @Getter
-public class HomeDetails {
+public class HomeDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-
-    Double square;
-    Double ceiling_height;
-    Double price;
-
-    Integer room_number;
     Integer floor;
-    Integer balcony_number;
-    Integer bath_room_number;
-
-    String description;
-    String floor_type;
-
     Boolean home_document;
-    Boolean gas;
+    Boolean barter;
+    Integer balcony_number;
+    Boolean lived_post_repaitment;
+    Boolean in_rent_now;
+    Double rent_amount;
+    Integer bath_room_number;
+    @Enumerated(EnumType.STRING)
+    HomeRepairSituation repairSituation;
+    Double ceiling_height;
     Boolean room_added;
     Boolean now_on_mortgage;
-    Boolean furnitured;
-    Boolean in_rent_now;
-    Boolean kombi;
     Boolean living_now;
+    @Enumerated(EnumType.STRING)
+    HomeView homeViewEnum;
 
-    Long home_details_building_details_id;
-
-    BuildingType buildingTypeId;
-    Long home_repait_situation_id;
-
-    Enum status;
 
 
 }

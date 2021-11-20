@@ -1,4 +1,4 @@
-package com.bem.estate.domain;
+package com.bem.estate.domain.address;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Setter
 @Getter
-public class OldLayoutType {
+public class Village {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
@@ -22,7 +22,5 @@ public class OldLayoutType {
     String name;
 
     @ManyToOne
-    Building buildingId;
-
-
+    Province province;
 }

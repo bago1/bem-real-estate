@@ -1,10 +1,10 @@
 package com.bem.estate.domain;
 
 import com.bem.estate.enums.ElanType;
-import com.bem.estate.enums.PropertyCategory;
+import com.bem.estate.enums.PropertyType;
+import com.bem.estate.enums.Status;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 
@@ -16,7 +16,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -27,25 +26,28 @@ import java.util.Set;
 @Setter
 @Getter
 public class Elan {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
     @Enumerated(EnumType.STRING)
-    ElanType elanTypeId;
+    ElanType elanType;
 
-    Double sellPrice;
+    @Enumerated(EnumType.STRING)
+   PropertyType propertyType;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    Set<BuildingDetails> buildingDetails;
+    @OneToOne
+    Home home;
+
+    @OneToOne
+    Building building;
 
     @ManyToOne
     AppUser appUserId;
 
-
     @Enumerated(EnumType.STRING)
-    PropertyCategory propertyCategoryId;
+    Status status;
 
-    @OneToOne
-    HomeDetails homeDetailsId;
 }

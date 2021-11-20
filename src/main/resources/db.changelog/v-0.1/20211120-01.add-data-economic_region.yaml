@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+    id: add-data-economic_region-20211120
+    author: bago
+    sqlFile:
+      path: /import-sql/economic_region.sql
