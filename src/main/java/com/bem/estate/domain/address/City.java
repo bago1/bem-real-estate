@@ -9,11 +9,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@Table(name = "CITY")
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

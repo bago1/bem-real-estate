@@ -1,4 +1,4 @@
-CREATE TABLE autorials_tDdSAbl22sdd3D (
+CREATE TABLE zzzzorijsjals_tDdSAbl22sdd3D (
                                id INT NOT NULL,
                                title VARCHAR(50) NOT NULL,
                                author VARCHAR(20) NOT NULL,
@@ -6,4 +6,4 @@ CREATE TABLE autorials_tDdSAbl22sdd3D (
 );
 
 INSERT INTO "ECONOMIC_REGION" VALUES
-    (623222,'B2asaSDkdsı');
+    (90,'B2');

@@ -9,11 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@Table(name = "PROVINCE")
+
 public class Province {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,4 +1,7 @@
-INSERT INTO "economic_region" VALUES
+CREATE TABLE IF NOT EXISTS "ECOOMIC_REGION2" (
+                                      "id" INT,
+                                      "name" TEXT);
+INSERT INTO "ECOOMIC_REGION2" VALUES
     (1,'Bakı'),
     (2,'Abşeron-Xızı'),
     (3,'Dağlıq-Şirvan'),

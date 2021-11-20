@@ -1,9 +1,9 @@
-CREATE TABLE IF NOT EXISTS "city" (
+CREATE TABLE IF NOT EXISTS "CITY" (
     "id" INT,
     "name" TEXT,
     "economic_region_id" INT
 );
-INSERT INTO "city" VALUES
+INSERT INTO "CITY" VALUES
     (1,'Bakı',1),
     (2,'Sumqayıt',2),
     (3,'Xırdalan',2),

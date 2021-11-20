@@ -1,9 +1,9 @@
-CREATE TABLE IF NOT EXISTS "province" (
+CREATE TABLE IF NOT EXISTS "PROVINCE" (
     "id" INT,
     "name" TEXT,
     "district_id" INT
 );
-INSERT INTO "province" VALUES
+INSERT INTO "PROVINCE" VALUES
     (1,'Binə',1),
     (2,'Buzovna',1),
     (3,'Dübəndi',1),
