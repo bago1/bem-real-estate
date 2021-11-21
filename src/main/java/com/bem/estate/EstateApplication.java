@@ -23,17 +23,13 @@ public class EstateApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        eco t = new eco(null,"kula");
 
-//        repo.save(t);
-        service.converter();
+        List<eco> converter = service.converter();
 
 
-//          converter.stream()
-//                  .forEach(x->repo.save(x));
+        converter.stream()
+                .forEach(repo::save);
 
-//        converter.stream()
-//                .forEach(x-> repo.save(x));
 
     }
 }
