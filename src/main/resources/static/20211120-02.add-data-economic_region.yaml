@@ -1,7 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-    id: add-data-economic_region-2021112023
-    author: bago
-    loadData:
-      file: classpath:import-sql/economic_region.sql
-#

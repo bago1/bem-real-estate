@@ -24,11 +24,12 @@ spring:
        org.hibernate: debug
 #  sql:
 #    init:
-#      mode: al
-#  liquibase:
-#    enabled: true
-#    drop-first: false
-#    change-log: classpath:db.changelog/db.changelog-master.yaml
-#    default-schema: public
+#      mode: always
+  liquibase:
+    enabled: true
+    drop-first: false
+    change-log: classpath:db.changelog/db.changelog-master.yaml
+
+    default-schema: public
 
 
