@@ -9,16 +9,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-@Table(name = "ECONOMIC_REGION")
+@SequenceGenerator(name = "sequence", sequenceName = "economicRegionSequence")
 public class EconomicRegion {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
     Long id;
     String name;
 

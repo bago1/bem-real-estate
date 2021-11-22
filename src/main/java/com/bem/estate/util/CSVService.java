@@ -1,5 +1,7 @@
-package com.bem.estate.util.csv;
+package com.bem.estate.util;
 
+import com.bem.estate.domain.address.City;
+import com.bem.estate.domain.address.EconomicRegion;
 import com.bem.estate.repo.TestRepo;
 import com.bem.estate.repo.eco;
 import com.opencsv.CSVReader;
@@ -15,21 +17,14 @@ import java.io.IOException;
 import java.util.List;
 
 
-@RequiredArgsConstructor
-@Service
 public class CSVService {
-    private final TestRepo repo;
 
-    public List converter() throws FileNotFoundException {
-        List<eco> pojos = new CsvToBeanBuilder(new FileReader("src/email.csv"))
-                .withType(eco.class)
+    public List csvToList() throws FileNotFoundException {
+        return new CsvToBeanBuilder(new FileReader("src/city.csv"))
+                .withType(City.class)
                 .build()
                 .parse();
-        System.out.println("reading"+pojos);
 
-        pojos.stream()
-                .forEach(x-> repo.save(x));
-        return pojos;
     }
 }
 //todo ; ile ayirma, bu ancaq vergul ile ayirir.

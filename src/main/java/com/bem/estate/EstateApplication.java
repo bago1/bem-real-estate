@@ -1,21 +1,28 @@
 package com.bem.estate;
 
-import com.bem.estate.repo.eco;
-import com.bem.estate.repo.TestRepo;
-import com.bem.estate.util.csv.CSVService;
-import com.bem.estate.util.csv.CsvPojo;
+import com.bem.estate.domain.address.District;
+import com.bem.estate.domain.address.Province;
+import com.bem.estate.dto.ImportDto;
+import com.bem.estate.repo.address.CityRepo;
+import com.bem.estate.repo.address.DistrictRepo;
+import com.bem.estate.repo.address.EconomicRegionRepo;
+import com.bem.estate.repo.address.ProvinceRepo;
+import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.FileReader;
 import java.util.List;
 
 @SpringBootApplication
 @RequiredArgsConstructor
 public class EstateApplication implements CommandLineRunner {
-    private final TestRepo repo;
-    private final CSVService service;
+//    private final EconomicRegionRepo economicRegionRepo;
+//    private final CityRepo cityRepo;
+//    private final DistrictRepo districtRepo;
+//    private final ProvinceRepo provinceRepo;
 
     public static void main(String[] args) {
         SpringApplication.run(EstateApplication.class, args);
@@ -24,12 +31,23 @@ public class EstateApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<eco> converter = service.converter();
+//        add list
+//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/province.csv"))
+//                .withType(ImportDto.class)
+//                .build()
+//                .parse();
+//
+//        System.out.println(list.toString());
 
 
-        converter.stream()
-                .forEach(repo::save);
-
-
+//        list.stream()
+//                .forEach(a -> {
+//                    System.out.println("s" + a.getName());
+//                    provinceRepo.save(
+//                            Province.builder()
+//                                    .name(a.getName())
+//                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
+//                                    .build());
+//                });
     }
 }
