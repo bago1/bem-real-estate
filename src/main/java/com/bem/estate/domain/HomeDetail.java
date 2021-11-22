@@ -13,15 +13,16 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@SequenceGenerator(name = "sequence", sequenceName = "homeDetailSequence")
 public class HomeDetail {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
     Long id;
     Integer floor;
     Boolean home_document;

@@ -5,15 +5,14 @@ import com.bem.estate.domain.Home;
 import com.bem.estate.dto.ElanDto;
 import com.bem.estate.dto.HomeDto;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
-public interface ElanMapper {
+public interface HomeMapper {
 
-    ElanMapper INSTANCE = Mappers.getMapper(ElanMapper.class);
+    HomeMapper INSTANCE = Mappers.getMapper(HomeMapper.class);
 
-    Elan elanDtoToElan(ElanDto elanDto);
 
-    ElanDto elanToElanDto(Elan elan);
+    Home homeDtoToHome(HomeDto homeDto);
+    HomeDto hometoHomeDto(Home home);
 }

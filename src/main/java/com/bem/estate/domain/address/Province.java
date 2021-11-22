@@ -19,8 +19,8 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "provinceSequence")
 @Builder
+@SequenceGenerator(name = "sequence", sequenceName = "provinceSequence")
 public class Province {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")

@@ -20,7 +20,6 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @SequenceGenerator(name = "sequence", sequenceName = "districtSequence")
-@Builder
 public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")

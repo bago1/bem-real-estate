@@ -9,14 +9,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@SequenceGenerator(name = "sequence", sequenceName = "locationSequence")
 public class Location {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
     Long id;
 
     String addressInfo;  // M.Hadi kucesi 24b

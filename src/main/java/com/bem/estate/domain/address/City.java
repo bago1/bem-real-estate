@@ -32,3 +32,6 @@ public class City {
     @ManyToOne
     EconomicRegion economicRegion;
 }
+//todo mene lazimdir butun klasslar 1-den baslasin bir bir qalxsin, bele olanda name=sequence edib, her yerde onu isledimmi,
+//todo yoxsa sequenceNameni mi isledim her yerde?
+//todo yoxsa umumietle name ve sequencename ferqi nedir?

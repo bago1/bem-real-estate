@@ -14,8 +14,8 @@ public class ElanController {
     private final ElanService elanService;
 
     @PostMapping
-    private void saveElan( ElanDto elanDto) {
-        System.out.println("come to controller");
+    private void saveElan(@RequestBody ElanDto elanDto) {
+        System.out.println(elanDto.toString());
         elanService.saveElan(elanDto);
     }
 }

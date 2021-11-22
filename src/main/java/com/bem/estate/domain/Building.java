@@ -1,6 +1,7 @@
 package com.bem.estate.domain;
 
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -14,18 +15,18 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @Setter
-//@Getter
+@Getter
+@SequenceGenerator(name = "sequence", sequenceName = "buildingSequence")
 public class Building {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
     Long id;
-
     String deliveryYear;
     Integer floor_number;
 

@@ -9,15 +9,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@SequenceGenerator(name = "sequence", sequenceName = "MTKSequence")
 public class MTK {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
     Long id;
 
     String name;
