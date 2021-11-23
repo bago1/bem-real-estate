@@ -15,10 +15,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "buildingFeatureSequence")
+@SequenceGenerator(name = "buildingFeatureSequence", allocationSize =1,sequenceName = "SQ_buildingFeature")
 public class BuildingFeature {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "buildingFeatureSequence")
     Long id;
     Boolean centralHeat;
 

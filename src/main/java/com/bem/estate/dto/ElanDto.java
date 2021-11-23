@@ -44,3 +44,4 @@ public class ElanDto {
 
 
 }
+//todo liquibase qosmaliyam initial datalar ucun. her de fe table silmeye qorxmuyub db-ni sile bilmeliyem

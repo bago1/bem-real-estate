@@ -1,4 +1,4 @@
-package com.bem.estate.dto;
+package com.bem.estate.dto.address;
 
 import com.bem.estate.constant.SwaggerExampleConstants;
 import com.bem.estate.domain.address.City;
@@ -19,12 +19,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class DistrictDto {
-    @ApiModelProperty(value = "district", example = SwaggerExampleConstants.DISTRICT)
+public class EconomicRegionDto {
+    @ApiModelProperty(value = "economic region", example = SwaggerExampleConstants.ECONOMIC_REGION)
     private String name;
-
-    @ApiModelProperty(value = "city", example = SwaggerExampleConstants.CITY)
-    private CityDto city;
 
 
 }

@@ -20,10 +20,10 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @Builder
-@SequenceGenerator(name = "sequence", sequenceName = "provinceSequence")
+@SequenceGenerator(name = "provinceSequence", allocationSize = 1,sequenceName = "SQ_province")
 public class Province {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "provinceSequence")
     Long id;
     String name;
 

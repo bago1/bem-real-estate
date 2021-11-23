@@ -19,10 +19,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "homeDetailSequence")
+@SequenceGenerator(name = "homeDetailSequence", allocationSize = 1,sequenceName = "SQ_homeDetail")
 public class HomeDetail {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "homeDetailSequence")
     Long id;
     Integer floor;
     Boolean home_document;

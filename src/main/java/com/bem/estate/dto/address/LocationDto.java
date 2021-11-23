@@ -1,4 +1,4 @@
-package com.bem.estate.dto;
+package com.bem.estate.dto.address;
 
 import com.bem.estate.constant.SwaggerExampleConstants;
 import com.bem.estate.domain.address.City;

@@ -15,10 +15,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "favouritySequence")
-public class Favourity {
+@SequenceGenerator(name = "favouriteSequence", allocationSize = 1,sequenceName = "SQ_favourite")
+public class Favourite {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "favouriteSequence")
     Long id;
 
     AppUser idn;

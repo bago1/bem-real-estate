@@ -22,10 +22,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "buildingSequence")
+@SequenceGenerator(name = "buildingSequence", allocationSize = 1,sequenceName = "SQ_building")
 public class Building {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "buildingSequence")
     Long id;
     String deliveryYear;
     Integer floor_number;

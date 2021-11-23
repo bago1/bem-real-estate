@@ -1,6 +1,7 @@
 package com.bem.estate.dto;
 
 import com.bem.estate.constant.SwaggerExampleConstants;
+import com.bem.estate.dto.address.LocationDto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

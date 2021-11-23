@@ -13,11 +13,11 @@ public interface ElanMapper {
 
     ElanMapper INSTANCE = Mappers.getMapper(ElanMapper.class);
 
-    @Mapping(source = "home.location.city",target = "home.location.city")
-    @Mapping(source = "home.location.province",target = "home.location.province")
-    @Mapping(source = "home.location.district",target = "home.location.district")
-    @Mapping(source = "home.location.economicRegion",target = "home.location.economicRegion")
-    @Mapping(source = "home.location.village",target = "home.location.village")
+    @Mapping(source = "home.location.city", target = "home.location.city.name")
+    @Mapping(source = "home.location.province", target = "home.location.province.name")
+    @Mapping(source = "home.location.district", target = "home.location.district.name")
+    @Mapping(source = "home.location.economicRegion", target = "home.location.economicRegion.name")
+    @Mapping(source = "home.location.village", target = "home.location.village.name")
     Elan elanDtoToElan(ElanDto elanDto);
 
 }

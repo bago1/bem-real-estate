@@ -19,10 +19,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "appUserSequence")
+@SequenceGenerator(name = "appUserSequence", allocationSize = 1,sequenceName = "SQ_appUser")
 public class AppUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "appUserSequence")
     Long id;
 
     String name;

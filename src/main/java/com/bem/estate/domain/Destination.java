@@ -17,10 +17,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "destinationSequence")
+@SequenceGenerator(name = "destinationSequence", allocationSize = 1,sequenceName = "SQ_destination")
 public class Destination {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "destinationSequence")
     Long id;
 
     String name;

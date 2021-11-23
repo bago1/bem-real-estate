@@ -21,10 +21,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "homeSequence")
+@SequenceGenerator(name = "homeSequence", allocationSize = 1,sequenceName = "SQ_home")
 public class Home {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "homeSequence")
     Long id;
     Double square;
     Double price;

@@ -15,10 +15,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "MTKSequence")
+@SequenceGenerator(name = "MTKSequence",allocationSize = 1,sequenceName = "SQ_mtk")
 public class MTK {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MTKSequence")
     Long id;
 
     String name;

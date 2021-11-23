@@ -15,10 +15,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "oldLayoutTypeSequence")
+@SequenceGenerator(name = "oldLayoutTypeSequence", allocationSize = 1,sequenceName = "SQ_oldLayoutType")
 public class OldLayoutType {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "oldLayoutTypeSequence")
     Long id;
 
     String name;

@@ -18,10 +18,10 @@ import javax.persistence.Table;
 @Entity
 @NoArgsConstructor
 @Setter
-@SequenceGenerator(name = "sequence", sequenceName = "citySequence")
+@SequenceGenerator(name = "citySequence", allocationSize = 1,sequenceName = "SQ_city")
 public class City {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "citySequence")
     Long id;
     String name;
 

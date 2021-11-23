@@ -19,20 +19,33 @@ import javax.persistence.SequenceGenerator;
 @AllArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "locationSequence")
+@SequenceGenerator(name = "locationSequence", allocationSize = 1,sequenceName = "SQ_location")
 public class Location {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "locationSequence")
     Long id;
     String addressInfo;
-    String city;
-    String district;
-    String province;
-    String village;
-    String economicRegion;
+
+    //todo will be replaced with PostGis
     Double lat_d;
     Double long_t;
 
+    @OneToOne
+    City city;
+
+    @OneToOne
+    District district;
+
+    @OneToOne
+    Province province;
+
+    @OneToOne
+    Village village;
+
+    @OneToOne
+    EconomicRegion economicRegion;
+
+
+
 }
 
-//MySQL's Spatial Extensions for long and lat

@@ -27,10 +27,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "elanSequence")
+@SequenceGenerator(sequenceName = "SQ_elan",name = "elanSequence", allocationSize = 1)
 public class Elan {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "elanSequence")
     private Long id;
 
     @Enumerated(EnumType.STRING)

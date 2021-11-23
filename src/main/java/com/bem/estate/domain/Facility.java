@@ -16,10 +16,10 @@ import javax.persistence.SequenceGenerator;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "facilitySequence")
+@SequenceGenerator(name = "facilitySequence", allocationSize = 1,sequenceName = "SQ_facility")
 public class Facility {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "facilitySequence")
     Long id;
 
     String name;

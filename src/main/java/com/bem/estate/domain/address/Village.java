@@ -16,10 +16,10 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "villageSequence")
+@SequenceGenerator(name = "villageSequence", allocationSize = 1,sequenceName = "SQ_village")
 public class Village {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "villageSequence")
     Long id;
 
     String name;

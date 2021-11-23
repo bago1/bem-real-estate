@@ -8,14 +8,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
+@SequenceGenerator(name = "HomeFeatureSequence", allocationSize = 1,sequenceName = "SQ_homeFeature")
 public class HomeFeature {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HomeFeatureSequence")
     Boolean kombi;
     Boolean internet;
     Boolean kabelTv;

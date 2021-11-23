@@ -19,10 +19,11 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "sequence", sequenceName = "districtSequence")
+@Builder
+@SequenceGenerator(name = "districtSequence", allocationSize = 1, sequenceName = "SQ_district")
 public class District {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "districtSequence")
     Long id;
 
     String name;

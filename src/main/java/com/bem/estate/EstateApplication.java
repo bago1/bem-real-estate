@@ -20,8 +20,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EstateApplication implements CommandLineRunner {
 //    private final EconomicRegionRepo economicRegionRepo;
-//    private final CityRepo cityRepo;
-//    private final DistrictRepo districtRepo;
+    private final CityRepo cityRepo;
+    private final DistrictRepo districtRepo;
 //    private final ProvinceRepo provinceRepo;
 
     public static void main(String[] args) {
@@ -31,22 +31,22 @@ public class EstateApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-//        add list
-//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/province.csv"))
+////        add list
+//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/district.csv"))
 //                .withType(ImportDto.class)
 //                .build()
 //                .parse();
 //
 //        System.out.println(list.toString());
-
-
+//
+//
 //        list.stream()
 //                .forEach(a -> {
 //                    System.out.println("s" + a.getName());
-//                    provinceRepo.save(
-//                            Province.builder()
+//                    districtRepo.save(
+//                            District.builder()
 //                                    .name(a.getName())
-//                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
+//                                    .city(cityRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
 //                                    .build());
 //                });
     }

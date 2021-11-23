@@ -38,7 +38,6 @@ public class ElanController {
 //        return ResponseEntity
 //                .ok(elanService.findElans(elanType, propertyType, city, priceFrom, priceTo));
 //    }
-
 }
 //todo heleki ancaq 1 property typea gore olsun, sonra 1 veya daha artiqin qoymaga baxacam
 //https://bina.az/baki/alqi-satqi/menziller?price_from=12&price_to=2121
