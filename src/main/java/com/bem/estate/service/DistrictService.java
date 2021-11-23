@@ -1,7 +1,10 @@
 package com.bem.estate.service;
 
+import com.bem.estate.domain.address.District;
 import com.bem.estate.dto.address.DistrictDto;
 
+import java.util.List;
+
 public interface DistrictService {
-    DistrictDto getByName(String name);
+    List<District> getDistrictsByCity(Long cityId);
 }
