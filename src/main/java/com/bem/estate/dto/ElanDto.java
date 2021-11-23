@@ -43,20 +43,4 @@ public class ElanDto {
 
 
 
-    @NotBlank
-    @ApiModelProperty(value = "square", example = SwaggerExampleConstants.SQUARE)
-    private Double square;
-
-    @NotBlank
-    @ApiModelProperty(value = "price", example = SwaggerExampleConstants.PRICE)
-    private Double price;
-
-    @NotBlank
-    @ApiModelProperty(value = "roomNumber", example = SwaggerExampleConstants.ROOM_NUMBER)
-    private Integer roomNumber;
-
-    @NotBlank
-    @ApiModelProperty(value = "description", example = SwaggerExampleConstants.DESCRIPTION)
-    private String description;
-
 }

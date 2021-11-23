@@ -17,11 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Setter
-@Getter
-@ToString
-@Builder
 @SequenceGenerator(name = "sequence", sequenceName = "citySequence")
 public class City {
     @Id

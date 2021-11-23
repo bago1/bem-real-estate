@@ -31,8 +31,10 @@ public class HomeDto {
     private Integer roomNumber;
 
     @NotBlank
-    @ApiModelProperty(value = "description", example = SwaggerExampleConstants.DESCRIPTION)
+    @ApiModelProperty(value = "description", example = SwaggerExampleConstants.ELAN_DESCRIPTION)
     private String description;
+
+    private LocationDto location;
 
 
 }

@@ -5,8 +5,9 @@ import com.bem.estate.domain.address.Location;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,10 +32,11 @@ public class Home {
 
     String description;
 
+    @OneToOne
+    @Cascade(CascadeType.ALL)
+    Location location;
+
     // //User user
-//
-//    @OneToOne(cascade = CascadeType.ALL)
-//    Location homeLocation;
 //
 //    @OneToOne
 //    HomeDetail homeDetail;
@@ -45,7 +47,6 @@ public class Home {
 //    @ManyToMany
 //    Set<Destination> destinations;
 //
-//    @OneToOne
-//    Location location;
+
 
 }
