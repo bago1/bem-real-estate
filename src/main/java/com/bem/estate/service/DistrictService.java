@@ -6,5 +6,5 @@ import com.bem.estate.dto.address.DistrictDto;
 import java.util.List;
 
 public interface DistrictService {
-    List<District> getDistrictsByCity(Long cityId);
+    List<District> getDistrictsByCity(Long districtId);
 }
