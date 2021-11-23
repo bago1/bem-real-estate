@@ -5,7 +5,6 @@ import com.bem.estate.dto.ElanDto;
 import com.bem.estate.service.ElanService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class ElanController {
+public class CityController {
     private final ElanService elanService;
 
     @PostMapping

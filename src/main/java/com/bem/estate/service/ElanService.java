@@ -6,7 +6,6 @@ import com.bem.estate.dto.ElanDto;
 import java.util.List;
 
 public interface ElanService {
-     Elan saveElan(ElanDto elanDto);
+    void saveElan(ElanDto elanDto);
 
-    List<Elan> findElans(String elanType, String propertyType, String city, String priceFrom, String priceTo);
 }

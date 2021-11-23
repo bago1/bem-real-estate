@@ -1,5 +1,6 @@
 package com.bem.estate.domain.address;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 @SequenceGenerator(name = "economicRegionSequence", allocationSize = 1,sequenceName = "SQ_economicRegion")

@@ -30,19 +30,19 @@ public class LocationDto {
     private String price;
 
     @ApiModelProperty(value = "city", example = SwaggerExampleConstants.CITY)
-    private String city;
+    private Long city;
 
     @ApiModelProperty(value = "district", example = SwaggerExampleConstants.DISTRICT)
-    private String district;
+    private Long district;
 
     @ApiModelProperty(value = "province", example = SwaggerExampleConstants.PROVINCE)
-    private String province;
+    private Long province;
 
-    @ApiModelProperty(value = "village", example = SwaggerExampleConstants.VILLAGE)
-    private String village;
+//    @ApiModelProperty(value = "village", example = SwaggerExampleConstants.VILLAGE)
+//    private Long village;
 
     @ApiModelProperty(value = "economicRegion", example = SwaggerExampleConstants.ECONOMIC_REGION)
-    String economicRegion;
+    private Long economicRegion;
 
     @ApiModelProperty(value = "address description", example = SwaggerExampleConstants.ADDRESS_DESCRIPTION)
     private String addressInfo;

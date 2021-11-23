@@ -1,5 +1,6 @@
 package com.bem.estate;
 
+import com.bem.estate.domain.address.City;
 import com.bem.estate.domain.address.District;
 import com.bem.estate.domain.address.Province;
 import com.bem.estate.dto.ImportDto;
@@ -19,10 +20,10 @@ import java.util.List;
 @SpringBootApplication
 @RequiredArgsConstructor
 public class EstateApplication implements CommandLineRunner {
-//    private final EconomicRegionRepo economicRegionRepo;
+    private final EconomicRegionRepo economicRegionRepo;
     private final CityRepo cityRepo;
     private final DistrictRepo districtRepo;
-//    private final ProvinceRepo provinceRepo;
+    private final ProvinceRepo provinceRepo;
 
     public static void main(String[] args) {
         SpringApplication.run(EstateApplication.class, args);
@@ -31,22 +32,23 @@ public class EstateApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-////        add list
-//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/district.csv"))
+//        add list
+//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/province.csv"))
 //                .withType(ImportDto.class)
 //                .build()
 //                .parse();
 //
 //        System.out.println(list.toString());
-//
-//
+
+
+
 //        list.stream()
 //                .forEach(a -> {
 //                    System.out.println("s" + a.getName());
-//                    districtRepo.save(
-//                            District.builder()
+//                    provinceRepo.save(
+//                            Province.builder()
 //                                    .name(a.getName())
-//                                    .city(cityRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
+//                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
 //                                    .build());
 //                });
     }

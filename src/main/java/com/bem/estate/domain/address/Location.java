@@ -19,7 +19,7 @@ import javax.persistence.SequenceGenerator;
 @AllArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "locationSequence", allocationSize = 1,sequenceName = "SQ_location")
+@SequenceGenerator(name = "locationSequence", allocationSize = 1, sequenceName = "SQ_location")
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "locationSequence")
@@ -29,23 +29,10 @@ public class Location {
     //todo will be replaced with PostGis
     Double lat_d;
     Double long_t;
-
-    @OneToOne
-    City city;
-
-    @OneToOne
-    District district;
-
-    @OneToOne
-    Province province;
-
-    @OneToOne
-    Village village;
-
-    @OneToOne
-    EconomicRegion economicRegion;
-
-
-
+    Long cityId;
+    Long districtId;
+    Long provinceId;
+    Long villageId;
+    Long economicRegionId;
 }
 

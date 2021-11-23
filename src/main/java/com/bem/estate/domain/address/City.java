@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,8 +19,11 @@ import javax.persistence.Table;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Setter
-@SequenceGenerator(name = "citySequence", allocationSize = 1,sequenceName = "SQ_city")
+@Getter
+@Builder
+@SequenceGenerator(name = "citySequence", allocationSize = 1, sequenceName = "SQ_city")
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "citySequence")
@@ -26,8 +31,6 @@ public class City {
     String name;
 
     @ManyToOne
+    @Cascade(CascadeType.ALL)
     EconomicRegion economicRegion;
 }
-//todo mene lazimdir butun klasslar 1-den baslasin bir bir qalxsin, bele olanda name=sequence edib, her yerde onu isledimmi,
-//todo yoxsa sequenceNameni mi isledim her yerde?
-//todo yoxsa umumietle name ve sequencename ferqi nedir?

@@ -27,7 +27,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(sequenceName = "SQ_elan",name = "elanSequence", allocationSize = 1)
+@SequenceGenerator(sequenceName = "SQ_elan", name = "elanSequence", allocationSize = 1)
 public class Elan {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "elanSequence")

@@ -11,11 +11,11 @@ public class SwaggerExampleConstants {
 
     public static final String ADDRESS_DESCRIPTION = "Mahammad Hadi kuc. 28";
 
-    public static final String CITY = "Bakı";
-    public static final String DISTRICT = "Xətai";
-    public static final String PROVINCE = "Keşlə";
+    public static final String CITY = "1";
+    public static final String DISTRICT = "5";
+    public static final String PROVINCE = "32";
     public static final String VILLAGE = "";
-    public static final String ECONOMIC_REGION = "Bakı";
+    public static final String ECONOMIC_REGION = "1";
     public static final String LATITUDE = "40.41617242770458";
     public static final String LONGTITUDE = "49.85858428659086";
 }

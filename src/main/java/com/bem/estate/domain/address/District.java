@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,9 +27,9 @@ public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "districtSequence")
     Long id;
-
     String name;
 
     @ManyToOne
+    @Cascade(CascadeType.ALL)
     City city;
 }

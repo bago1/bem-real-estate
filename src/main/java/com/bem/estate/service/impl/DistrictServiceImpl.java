@@ -19,7 +19,7 @@ public class DistrictServiceImpl implements DistrictService {
     @Override
     public DistrictDto getByName(String name) {
         return DistrictMapper.INSTANCE.DistrictToDistrictDto(
-                districtRepo.findByName(name)
+                districtRepo.findByCity(name)
                         .orElseThrow(NullPointerException::new));
     }
 }
