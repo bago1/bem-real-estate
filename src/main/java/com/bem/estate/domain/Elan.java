@@ -8,23 +8,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
-
+import org.hibernate.annotations.Where;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
+//@Where(clause = )
 @Setter
 @Getter
 @SequenceGenerator(sequenceName = "SQ_elan", name = "elanSequence", allocationSize = 1)
@@ -43,13 +40,16 @@ public class Elan {
     @Cascade(CascadeType.ALL)
     private Home home;
 
-//    @OneToOne
-//    Building building;
-//
+    @OneToOne
+    @Cascade(CascadeType.ALL)
+    Building building;
+
 //    @ManyToOne
 //    AppUser appUserId;
 //
-//    @Enumerated(EnumType.STRING)
-//    Status status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+    private Boolean workWithAgent;
 
 }

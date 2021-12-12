@@ -1,0 +1,1 @@
+java -jar estate-0.0.1-SNAPSHOT --spring.config.location=file:app-conf.yaml >/dev/null 2>&1 &

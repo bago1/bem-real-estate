@@ -7,23 +7,36 @@ import com.bem.estate.repo.address.CityRepo;
 import com.bem.estate.service.CityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class CityServiceImpl implements CityService {
     private final CityRepo cityRepo;
+    private final CityMapper cityMapper;
 
     @Override
     public CityDto getByName(String name) {
-        return CityMapper.INSTANCE.cityToCityDto(
-                cityRepo.findByName(name)
-                        .orElseThrow(NullPointerException::new));
+        return null;
     }
 
     @Override
-    public Page<City> getAll(Pageable pageable) {
-        return cityRepo.findAll(pageable);
+    public CityDto findById(long id) {
+       return CityMapper.INSTANCE.cityToCityDto(
+               cityRepo.findById(id)
+                       .orElseThrow(NullPointerException::new));
+    }
+
+    @Override
+    public Page<CityDto> getAll(Pageable pageable) {
+         List<City> cities = cityRepo.findAll();
+         List<CityDto> cityDtos = cityMapper.cityListToCityDtoList(cities);
+          PageImpl<CityDto> cityDtoPage = new PageImpl<>(cityDtos);
+          return cityDtoPage;
     }
 }
+

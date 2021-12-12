@@ -1,8 +1,6 @@
 package com.bem.estate;
 
-import com.bem.estate.domain.address.City;
-import com.bem.estate.domain.address.District;
-import com.bem.estate.domain.address.Province;
+import com.bem.estate.domain.address.EconomicRegion;
 import com.bem.estate.dto.ImportDto;
 import com.bem.estate.repo.address.CityRepo;
 import com.bem.estate.repo.address.DistrictRepo;
@@ -19,7 +17,7 @@ import java.util.List;
 
 @SpringBootApplication
 @RequiredArgsConstructor
-public class EstateApplication implements CommandLineRunner {
+public class EstateApplication implements CommandLineRunner  {
     private final EconomicRegionRepo economicRegionRepo;
     private final CityRepo cityRepo;
     private final DistrictRepo districtRepo;
@@ -33,23 +31,23 @@ public class EstateApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 //        add list
-//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/province.csv"))
-//                .withType(ImportDto.class)
-//                .build()
-//                .parse();
-//
-//        System.out.println(list.toString());
+        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/economic_region.csv"))
+                .withType(ImportDto.class)
+                .build()
+                .parse();
+
+        System.out.println(list.toString());
 
 
 
-//        list.stream()
-//                .forEach(a -> {
-//                    System.out.println("s" + a.getName());
-//                    provinceRepo.save(
-//                            Province.builder()
-//                                    .name(a.getName())
+        list.stream()
+                .forEach(a -> {
+                    System.out.println("s" + a.getName());
+                    economicRegionRepo.save(
+                            EconomicRegion.builder()
+                                    .name(a.getName())
 //                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
-//                                    .build());
-//                });
+                                    .build());
+                });
     }
 }

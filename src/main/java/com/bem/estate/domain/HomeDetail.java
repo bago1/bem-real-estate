@@ -25,22 +25,24 @@ public class HomeDetail {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "homeDetailSequence")
     Long id;
     Integer floor;
-    Boolean home_document;
+    Boolean homeDocument;
     Boolean barter;
-    Integer balcony_number;
-    Boolean lived_post_repaitment;
-    Boolean in_rent_now;
-    Double rent_amount;
-    Integer bath_room_number;
+    Integer balconyNumber;
+    Boolean postRepairmentLiving;
+    Boolean inRentNow;
+    Boolean electric;
+    Boolean continuousWater;
+    Boolean gas;
+    Double rentAmount;
+    Integer bathroomNumber;
     @Enumerated(EnumType.STRING)
     HomeRepairSituation repairSituation;
-    Double ceiling_height;
-    Boolean room_added;
-    Boolean now_on_mortgage;
-    Boolean living_now;
+    Double ceilingHeight;
+    Boolean roomAdded;
+    Boolean nowOnMortgage;
+    Boolean mortgageAvailable;
+    Boolean livingNow;
     @Enumerated(EnumType.STRING)
     HomeView homeViewEnum;
-
-
 
 }

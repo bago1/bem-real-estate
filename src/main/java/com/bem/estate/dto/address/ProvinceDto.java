@@ -15,6 +15,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class ProvinceDto {
+    @ApiModelProperty(value = "id", example = SwaggerExampleConstants.ONE)
+    private long id;
+
     @ApiModelProperty(value = "province", example = SwaggerExampleConstants.PROVINCE)
     private String province;
 

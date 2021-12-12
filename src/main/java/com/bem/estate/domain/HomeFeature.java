@@ -18,20 +18,20 @@ import javax.persistence.SequenceGenerator;
 public class HomeFeature {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HomeFeatureSequence")
-    Boolean kombi;
+    Long id;
+    Boolean combiBoiler;
     Boolean internet;
-    Boolean kabelTv;
-    Boolean telefon;
+    Boolean cableTv;
+    Boolean telephone;
     Boolean storage;
     Boolean showerCabin;
-    Boolean jakuzi;
     Integer airConditioner;
-    Boolean hot_floor;
-    String floor_type;
-    Boolean furnitured;
-    String remained_furnitures;
+    Boolean hotFloor;
+    String floorType;
+    Boolean furniture;
+    String remained_furniture;
     Boolean gas;
-    Boolean central_heat;
+    Boolean centralHeat;
 
 
 

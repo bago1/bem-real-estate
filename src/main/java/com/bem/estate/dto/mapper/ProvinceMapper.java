@@ -1,24 +1,24 @@
 package com.bem.estate.dto.mapper;
 
-import com.bem.estate.domain.address.City;
-import com.bem.estate.dto.address.CityDto;
+import com.bem.estate.domain.address.Province;
+import com.bem.estate.dto.address.ProvinceDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import org.springframework.data.domain.Page;
 
 @Mapper
-public interface CityMapper {
+public interface ProvinceMapper {
 
-    CityMapper INSTANCE = Mappers.getMapper(CityMapper.class);
-
-
-    CityDto cityToCityDto(City city);
+    ProvinceMapper INSTANCE = Mappers.getMapper(ProvinceMapper.class);
 
 
-    City cityDtoToCity(CityDto cityDto);
+    ProvinceDto ProvinceToProvinceDto(Province Province);
 
-   Page<City> cityDtoPageToCityPage(Page<CityDto> cityDto);
-   Page<CityDto> cityPageToCityDtoPage(Page<City> city);
+
+    Province ProvinceDtoToProvince(ProvinceDto ProvinceDto);
+
+//   Page<Province> ProvinceDtoPageToProvincePage(Page<ProvinceDto> ProvinceDto);
+//   Page<ProvinceDto> map(Page<Province> Province);
 
 
 }

@@ -18,11 +18,10 @@ import java.util.Set;
 @Setter
 @Getter
 @SequenceGenerator(name = "destinationSequence", allocationSize = 1,sequenceName = "SQ_destination")
-public class Destination {
+public class CommonDestinationPoint {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "destinationSequence")
     Long id;
-
     String name;
 
     @ManyToMany

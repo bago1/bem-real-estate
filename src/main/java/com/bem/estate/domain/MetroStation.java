@@ -17,10 +17,10 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "destinationSequence", allocationSize = 1,sequenceName = "SQ_destination")
-public class CommonDestinationPoint {
+@SequenceGenerator(name = "metroSequence", allocationSize = 1,sequenceName = "SQ_metro")
+public class MetroStation {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "destinationSequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "metroSequence")
     Long id;
     String name;
 

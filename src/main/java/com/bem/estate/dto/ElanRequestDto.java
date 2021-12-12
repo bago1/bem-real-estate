@@ -11,11 +11,10 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RentElanRequestDto {
+public class ElanRequestDto {
 
     @ApiModelProperty(value = "elanType", example = SwaggerExampleConstants.ELAN_TYPE)
     private String elanType;
-
 
     @ApiModelProperty(value = "propertyType", example = SwaggerExampleConstants.PROPERTY_TYPE)
     private String propertyType;
@@ -52,29 +51,19 @@ public class RentElanRequestDto {
     private Integer floor;
 
 
-    @ApiModelProperty(value = "rentType", example = SwaggerExampleConstants.MONTHLY)
-    private Boolean rentType;
 
-    @ApiModelProperty(value = "availableForMortgage", example = SwaggerExampleConstants.TRUE)
-    private Boolean availableForMortgage;
-
-    @ApiModelProperty(value = "barterAvailable", example = SwaggerExampleConstants.TRUE)
-    private Boolean barterAvailable;
 
     @ApiModelProperty(value = "hasGas", example = SwaggerExampleConstants.TRUE)
     private Boolean hasGas;
 
-    @ApiModelProperty(value = "hasDocument", example = SwaggerExampleConstants.TRUE)
-    private Boolean hasDocument;
-
-    @ApiModelProperty(value = "nowOnMortgage", example = SwaggerExampleConstants.TRUE)
-    private Boolean nowOnMortgage;
 
     @ApiModelProperty(value = "homeRepairmentSituation", example = SwaggerExampleConstants.HOME_REPAIRMENT_SITUATION)
     private String homeRepairmentSituation;
 
+
     @ApiModelProperty(value = "nowOnRent", example = SwaggerExampleConstants.TRUE)
     private Boolean nowOnRent;
+
 
     @ApiModelProperty(value = "nowLiving", example = SwaggerExampleConstants.TRUE)
     private Boolean nowLiving;
@@ -85,4 +74,4 @@ public class RentElanRequestDto {
     @ApiModelProperty(value = "furnished", example = SwaggerExampleConstants.TRUE)
     private Boolean furnished;
 }
-}
+

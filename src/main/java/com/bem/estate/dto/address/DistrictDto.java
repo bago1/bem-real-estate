@@ -15,6 +15,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class DistrictDto {
+    @ApiModelProperty(value = "id", example = SwaggerExampleConstants.ONE)
+    private long id;
+
     @ApiModelProperty(value = "district", example = SwaggerExampleConstants.DISTRICT)
     private String name;
 

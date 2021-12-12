@@ -1,43 +1,44 @@
 package com.bem.estate.domain;
 
 
+import com.bem.estate.enums.BuildingType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "buildingSequence", allocationSize = 1,sequenceName = "SQ_building")
+@SequenceGenerator(name = "buildingSequence", allocationSize = 1, sequenceName = "SQ_building")
 public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "buildingSequence")
-    Long id;
-    String deliveryYear;
-    Integer floor_number;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    MTK mtk;
+    private Long id;
+    @Enumerated(EnumType.STRING)
+    private BuildingType buildingType;
 
-    @ManyToMany
-    Set<Facility> facilities;
+    private  Integer deliveryYear;
+    private  Integer floor_number;
+    private  Double buildingUtilityM2;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    Elan elanus;
-//todo butun evleri dogru binaya baglamaq cetin ve mumkunsuz olur deye adresi ev bazli verdim
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private BuildingConstructionCompany buildingConstructionCompany;
+
+//    @ManyToMany
+//    Set<Facility> facilities;
+//todo bu nedir unutmusam. meselen bu heyetde olan berber, baxca falandirsa artiq infodur.
 }
 

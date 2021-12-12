@@ -12,37 +12,37 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @Setter
 @Getter
-@SequenceGenerator(name = "homeSequence", allocationSize = 1,sequenceName = "SQ_home")
+@SequenceGenerator(name = "homeSequence", allocationSize = 1, sequenceName = "SQ_home")
 public class Home {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "homeSequence")
-    Long id;
-    Double square;
-    Double price;
-    Integer roomNumber;
-
-    String description;
+    private Long id;
+    private Double squareOnContract;
+    private Double squareOnDocument;
+    private Double price;
+    private Integer roomNumber;
+// todo kupca ingilisce nedi
+    private String description;
 
     @OneToOne
     @Cascade(CascadeType.ALL)
-    Location location;
+    private Location location;
 
-    // //User user
-//
-//    @OneToOne
-//    HomeDetail homeDetail;
-//
-//    @OneToOne
-//    HomeFeature homeFeature;
+
+    @OneToOne
+    @Cascade(CascadeType.ALL)
+    private HomeDetail homeDetail;
+
+    @OneToOne
+    @Cascade(CascadeType.ALL)
+    private HomeFeature homeFeature;
 //
 //    @ManyToMany
 //    Set<Destination> destinations;

@@ -16,7 +16,7 @@ import javax.persistence.SequenceGenerator;
 @Setter
 @Getter
 @SequenceGenerator(name = "MTKSequence",allocationSize = 1,sequenceName = "SQ_mtk")
-public class MTK {
+public class BuildingConstructionCompany {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MTKSequence")
     Long id;

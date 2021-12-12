@@ -9,5 +9,7 @@ import org.springframework.data.domain.Pageable;
 public interface CityService {
     CityDto getByName(String name);
 
-    Page<City> getAll(Pageable pageable);
+    Page<CityDto> getAll(Pageable pageable);
+
+    CityDto findById(long id);
 }

@@ -1,20 +1,12 @@
 package com.bem.estate.dto.address;
 
 import com.bem.estate.constant.SwaggerExampleConstants;
-import com.bem.estate.domain.address.City;
-import com.bem.estate.domain.address.District;
-import com.bem.estate.domain.address.EconomicRegion;
-import com.bem.estate.domain.address.Province;
-import com.bem.estate.domain.address.Village;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-import javax.persistence.OneToOne;
-import javax.validation.constraints.NotBlank;
 
 
 @Setter
@@ -23,11 +15,7 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @ToString
 public class LocationDto {
-    @ApiModelProperty(value = "square", example = SwaggerExampleConstants.SQUARE)
-    private Double square;
 
-    @ApiModelProperty(value = "price", example = SwaggerExampleConstants.PRICE)
-    private String price;
 
     @ApiModelProperty(value = "city", example = SwaggerExampleConstants.CITY)
     private Long city;

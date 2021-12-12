@@ -1,11 +1,12 @@
 package com.bem.estate.service;
 
-import com.bem.estate.domain.address.District;
 import com.bem.estate.domain.address.Province;
+import com.bem.estate.dto.address.ProvinceDto;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 public interface ProvinceService {
-    List<Province> getProvincesByDistrict(Long districtId);
+    Page<ProvinceDto> getProvincesByDistrictId(Long districtId);
 
 }
