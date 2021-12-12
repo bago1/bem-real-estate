@@ -1,36 +1,25 @@
-
+version: "3"
 services:
   db:
-    container_name: POSTGRES
-    image: postgres:14
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: testdb
-    volumes:
-      - vol_estate_test:/var/lib/postgresql/data
+    container_name: POSTGRES2
+    image: "postgres:13"
     ports:
-      - "5432:5432"
-    networks:
-      - net_estate_test
+      - "5435:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=testdb
 
-  springboot:
-    container_name: SPRING
+  springboot2:
+    container_name: SPRING2
     build: .
     environment:
       POSTGRES_JDBC_USER: root
       POSTGRES_JDBC_PASSWORD: pass
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/testdb"
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/testdb
     ports:
     - "8081:8080"
     depends_on:
       - db
-    networks:
-      - net_estate_test
-
-
-volumes:
-  vol_estate_test:
-networks:
-  net_estate_test:
-    driver: bridge

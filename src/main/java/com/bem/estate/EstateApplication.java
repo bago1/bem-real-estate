@@ -31,23 +31,23 @@ public class EstateApplication implements CommandLineRunner  {
     public void run(String... args) throws Exception {
 
 //        add list
-        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/economic_region.csv"))
-                .withType(ImportDto.class)
-                .build()
-                .parse();
-
-        System.out.println(list.toString());
-
-
-
-        list.stream()
-                .forEach(a -> {
-                    System.out.println("s" + a.getName());
-                    economicRegionRepo.save(
-                            EconomicRegion.builder()
-                                    .name(a.getName())
-//                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
-                                    .build());
-                });
+//        List<ImportDto> list = new CsvToBeanBuilder(new FileReader("src/economic_region.csv"))
+//                .withType(ImportDto.class)
+//                .build()
+//                .parse();
+//
+//        System.out.println(list.toString());
+//
+//
+//
+//        list.stream()
+//                .forEach(a -> {
+//                    System.out.println("s" + a.getName());
+//                    economicRegionRepo.save(
+//                            EconomicRegion.builder()
+//                                    .name(a.getName())
+////                                    .district(districtRepo.findById(a.getOtherTableId()).orElseThrow(NullPointerException::new))
+//                                    .build());
+//                });
     }
 }

@@ -1,16 +1,16 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/testdb
+    url: jdbc:postgresql://localhost:5435/testdb
     username: root
     password: pass
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+      ddl-auto: update
+    show-sql: off
     properties:
       hibernate:
-        format_sql: true
+#        format_sql: false
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
@@ -24,9 +24,8 @@ spring:
   #  sql:
   #    init:
   #      mode: always
-  liquibase:
-    enabled: true
-    change-log: classpath:db.changelog/db.changelog-master.yaml
-    default-schema: testessch
+#  liquibase:
+#    enabled: true
+#    change-log: classpath:db.changelog/db.changelog-master.yaml
+#    default-schema: testessch
 
-#    todo nie ozlokalimdan qosula bilirem, ama docker compose faylindaki spring bu docker composedaki postgreye qowula bilmir

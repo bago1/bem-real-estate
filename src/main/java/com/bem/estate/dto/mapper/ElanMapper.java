@@ -15,6 +15,7 @@ public interface ElanMapper {
     @Mapping(source = "home.location.province", target = "home.location.provinceId")
     @Mapping(source = "home.location.district", target = "home.location.districtId")
     @Mapping(source = "home.location.economicRegion", target = "home.location.economicRegionId")
+    @Mapping(source = "home.homeDetail.repairSituation", target = "home.homeDetail.repairSituation")
     Elan elanDtoToElan(ElanDto elanDto);
 
 }

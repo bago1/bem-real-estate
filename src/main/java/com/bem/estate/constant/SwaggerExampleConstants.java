@@ -27,7 +27,7 @@ public class SwaggerExampleConstants {
     public static final String BALCONY_NUMBER = "2";
     public static final String RENT_AMOUNT = "350";
     public static final String BATHROOM_NUMBER = "2";
-    public static final String REPAIR_SITUATION = "PARTLY";
+    public static final String REPAIR_SITUATION = "NEEDED";
     public static final String CEILING_HEIGHT = "290";
     public static final String HOME_VIEW_ENUM = "SEA_VIEW";
     public static final String MTK_NAME = "Karvan MTK";

@@ -46,8 +46,12 @@ public class HomeDetailDto {
 
     @ApiModelProperty(value = "bathroomNumber", example = SwaggerExampleConstants.BATHROOM_NUMBER)
     Integer bathroomNumber;
+
+
     @ApiModelProperty(value = "repairSituation", example = SwaggerExampleConstants.REPAIR_SITUATION)
-    HomeRepairSituation repairSituation;
+    String repairSituation;
+
+
     @ApiModelProperty(value = "ceilingHeight", example = SwaggerExampleConstants.CEILING_HEIGHT)
     Double ceilingHeight;
     @ApiModelProperty(value = "roomAdded", example = SwaggerExampleConstants.TRUE)
