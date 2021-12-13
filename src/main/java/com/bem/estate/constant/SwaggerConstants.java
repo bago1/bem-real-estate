@@ -7,6 +7,7 @@ public final class SwaggerConstants {
     public static final String GET_PROVINCES_BY_DISTRICT = "This method gets all provinces in selected district";
     public static final String FIND_ELAN = "This method finds elan by given parameters";
     public static final String GET_CITY_BY_ID = "This method finds city by given id";
+    public static final String GET_ALL_ELANS = "THis method gets all elans";
 
 
     private SwaggerConstants(){
