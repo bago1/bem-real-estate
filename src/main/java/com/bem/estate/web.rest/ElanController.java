@@ -29,6 +29,8 @@ public class ElanController {
     }
 
     @GetMapping("/")
+    @ApiOperation(SwaggerConstants.GET_ALL_ELANS)
+
     private List<ElanDto> getELans(){
        return elanService.getAllELans();
      }
