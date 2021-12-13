@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface ElanMapper {
 
@@ -17,5 +19,7 @@ public interface ElanMapper {
     @Mapping(source = "home.location.economicRegion", target = "home.location.economicRegionId")
     @Mapping(source = "home.homeDetail.repairSituation", target = "home.homeDetail.repairSituation")
     Elan elanDtoToElan(ElanDto elanDto);
+
+    List<ElanDto> elanListToELanDtoList(List<Elan> elans);
 
 }
