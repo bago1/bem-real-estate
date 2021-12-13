@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -27,8 +28,8 @@ public class ElanController {
 
     }
 
-    @PostMapping("/mapsa")
-    private void createSellingElan(@RequestParam Map<String,String> allParams){
-        System.out.println(allParams.entrySet());
-    }
+    @GetMapping("/")
+    private List<ElanDto> getELans(){
+       return elanService.getAllELans();
+     }
 }

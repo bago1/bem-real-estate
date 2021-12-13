@@ -18,11 +18,12 @@ public class ElanServiceImpl implements ElanService {
     private final ElanRepo elanRepo;
 
 
-   // @Override
-//    public List<Elan> findElanByFields(SellingElanRequestDto request) {
-//return elanRepo.getElanByRequestedFields(request);
-//                return null;
-//        }
+    @Override
+    public List<ElanDto> getAllELans() {
+       return ElanMapper.INSTANCE.elanListToELanDtoList(elanRepo.findAll());
+     }
+
+
     @Override
     public void saveElan(ElanDto elanDto) {
         Elan entity = ElanMapper.INSTANCE.elanDtoToElan(elanDto);

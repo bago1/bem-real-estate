@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface ElanService {
     void saveElan(ElanDto elanDto);
+
+    List<ElanDto> getAllELans();
 //    void deactivateElan(String elanId);
 //    Boolean elanExpired(String elanId);
 //    Elan getElan(Object o);
