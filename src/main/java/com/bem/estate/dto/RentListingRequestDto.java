@@ -6,12 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class RentElanRequestDto extends ElanRequestDto {
+public class RentListingRequestDto extends ListingRequestDto {
 
 
     @ApiModelProperty(value = "rentType", example = SwaggerExampleConstants.MONTHLY)

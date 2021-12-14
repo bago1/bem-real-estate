@@ -1,8 +1,6 @@
 package com.bem.estate.dto;
 
 import com.bem.estate.constant.SwaggerExampleConstants;
-import com.bem.estate.domain.HomeDetail;
-import com.bem.estate.domain.HomeFeature;
 import com.bem.estate.dto.address.LocationDto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -37,7 +35,7 @@ public class HomeDto {
     private Integer roomNumber;
 
     @NotBlank
-    @ApiModelProperty(value = "description", example = SwaggerExampleConstants.ELAN_DESCRIPTION)
+    @ApiModelProperty(value = "description", example = SwaggerExampleConstants.LISTING_DESCRIPTION)
     private String description;
 
     private LocationDto location;
