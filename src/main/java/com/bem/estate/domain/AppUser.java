@@ -35,7 +35,7 @@ public class AppUser {
     String mobileNumber;
 
     @ManyToMany
-    Set<Elan> favourities;
+    Set<Listing> favourities;
 
     @Enumerated(EnumType.STRING)
     AppUserType userType;

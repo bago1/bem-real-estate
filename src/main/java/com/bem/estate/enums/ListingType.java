@@ -1,6 +1,6 @@
 package com.bem.estate.enums;
 
-public enum ElanType {
+public enum ListingType {
     SALE, RENT;
 }
 

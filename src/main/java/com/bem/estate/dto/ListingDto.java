@@ -16,11 +16,11 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ElanDto {
+public class ListingDto {
 
     @NotBlank
-    @ApiModelProperty(value = "elanType", example = SwaggerExampleConstants.ELAN_TYPE)
-    private String elanType;
+    @ApiModelProperty(value = "listingTYpe", example = SwaggerExampleConstants.LISTING_TYPE)
+    private String listingType;
 
     @NotBlank
     @ApiModelProperty(value = "propertyType", example = SwaggerExampleConstants.PROPERTY_TYPE)

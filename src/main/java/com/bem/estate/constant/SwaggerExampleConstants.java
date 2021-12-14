@@ -2,12 +2,12 @@ package com.bem.estate.constant;
 
 
 public class SwaggerExampleConstants {
-    public static final String ELAN_TYPE = "SALE";
+    public static final String LISTING_TYPE = "SALE";
     public static final String PROPERTY_TYPE = "BUILDING";
     public static final String SQUARE = "120.2";
     public static final String PRICE = "123000.00";
     public static final String ROOM_NUMBER = "3";
-    public static final String ELAN_DESCRIPTION = "Sheherin merkezinde ela menzil";
+    public static final String LISTING_DESCRIPTION = "Sheherin merkezinde ela menzil";
 
     public static final String ADDRESS_DESCRIPTION = "Mahammad Hadi kuc. 28";
 

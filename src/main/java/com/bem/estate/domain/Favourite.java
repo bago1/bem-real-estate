@@ -19,6 +19,6 @@ public class Favourite {
     Long id;
 
     AppUser appUser;
-    Elan elan;
+    Listing listing;
 
 }
